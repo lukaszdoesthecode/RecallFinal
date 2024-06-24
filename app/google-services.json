@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252415614328",
+    "project_id": "recallfinal-bdd03",
+    "storage_bucket": "recallfinal-bdd03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252415614328:android:bf8d312ae0aa7a91593c8d",
+        "android_client_info": {
+          "package_name": "com.example.recall"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRaUHAagBcsiryDXuWiGcCtKP6QJJBYkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="left|center_vertical"
+        android:background="@color/primary"
+        tools:context=".bnt.ScoreBNT"
+            tools:ignore="RtlHardcoded">
+
+        <TextView
+            android:id="@+id/totalCorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:text="@string/total_correct" />
+
+        <TextView
+            android:id="@+id/totalErrors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:text="@string/total_errors" />
+
+        <TextView
+            android:id="@+id/phoneticErrors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:text="@string/phonetic_errors" />
+
+        <TextView
+            android:id="@+id/semanticErrors"
+            android:layout_width="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="36dp"
+            android:layout_height="wrap_content"
+            android:text="@string/semantic_errors" />
+
+        <TextView
+            android:id="@+id/perseverativeErrors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:text="@string/perseverative_errors" />
+
+        <TextView
+            android:id="@+id/cueUtilization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:text="@string/cue_utilization" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:text="@string/date" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="150dp"
+            android:text="@string/back"
+            android:textColor="@color/primary"
+            android:textSize="24sp"/>
+
+</LinearLayout>

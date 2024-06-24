@@ -1,0 +1,27 @@
+<menu    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_bnt"
+        android:icon="@drawable/polaroid"
+        android:title="@string/bnt" />
+
+    <item
+        android:id="@+id/nav_dst"
+        android:icon="@drawable/number"
+        android:title="@string/dst" />
+
+    <item
+        android:id="@+id/nav_sst"
+        android:icon="@drawable/memory"
+        android:title="@string/sst"/>
+
+    <item
+        android:id="@+id/nav_st"
+        android:icon="@drawable/colors"
+        android:title="@string/st" />
+
+    <item
+        android:id="@+id/nav_res"
+        android:icon="@drawable/past"
+        android:title="@string/results" />
+</menu>

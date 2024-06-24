@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/gameType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Type"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/totalCorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Correct"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/totalErrors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Errors"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/phoneticErrors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phonetic Errors"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/semanticErrors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Semantic Errors"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/perseverativeErrors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perseverative Errors"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/cueUtilization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cue Utilization"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/averageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average Time"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/spanTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Span Time"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/correctAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correct Answers"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/incorrectAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incorrect Answers"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="16sp" />
+</LinearLayout>
