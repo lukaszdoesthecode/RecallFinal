@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.recall.R
+import java.text.SimpleDateFormat
 import java.util.*
 
 /**
@@ -124,11 +125,13 @@ class DST : AppCompatActivity() {
     private fun endGame() {
         val spanTime = (System.currentTimeMillis() - startTime) / 1000F
         val currentDate = Date()
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        val formattedDate = dateFormat.format(currentDate)
 
         val intent = Intent(this, ScoreDST::class.java).apply {
             putExtra("spanTime", spanTime)
             putExtra("totalCorrect", totalCorrect)
-            putExtra("date", currentDate.time) // Pass date as long
+            putExtra("date", formattedDate)
         }
         startActivity(intent)
         finish()

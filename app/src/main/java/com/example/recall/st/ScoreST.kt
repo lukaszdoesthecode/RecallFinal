@@ -35,10 +35,12 @@ class ScoreST : AppCompatActivity() {
         val averageTime = intent.getDoubleExtra("averageTime", 0.0).toFloat()
         val correctAnswers = intent.getIntExtra("correctAnswers", 0)
         val incorrectAnswers = intent.getIntExtra("incorrectAnswers", 0)
+        val date = Date(intent.getLongExtra("date", 0))
 
         findViewById<TextView>(R.id.averageTime).text = "SpanTime: $averageTime s"
         findViewById<TextView>(R.id.correctAnswers).text = "Total Correct: $correctAnswers"
         findViewById<TextView>(R.id.incorrectAnswers).text = "Total Incorrect: $incorrectAnswers"
+        findViewById<TextView>(R.id.date).text = "Date: $date"
 
         saveGameData(DataST(averageTime, correctAnswers, incorrectAnswers, Date()))
 
@@ -64,7 +66,7 @@ class ScoreST : AppCompatActivity() {
                 .addOnSuccessListener {
                     // Successfully saved game data
                 }
-                .addOnFailureListener { e ->
+                .addOnFailureListener { _ ->
                     // Handle the failure
                 }
         }

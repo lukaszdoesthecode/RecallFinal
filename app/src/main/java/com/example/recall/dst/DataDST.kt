@@ -13,7 +13,7 @@ data class DataDST(
     val noTests: Int = 0,
     val spanTime: Float = 0f,
     val totalCorrect: Int = 0,
-    val date: Date = Date() // Adding date for the game
+    val date: Date = Date()
 ) {
     constructor() : this(0, 0f, 0, Date())
 }

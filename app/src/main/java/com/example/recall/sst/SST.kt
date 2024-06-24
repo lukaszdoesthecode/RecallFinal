@@ -9,6 +9,9 @@ import android.widget.Button
 import android.widget.GridLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.recall.R
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 import kotlin.math.min
 import kotlin.random.Random
 
@@ -136,10 +139,16 @@ class SST : AppCompatActivity() {
                 generateNextSequence()
             }
         } else {
+            val currentDate = Date()
+            val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+            val formattedDate = dateFormat.format(currentDate)
+
             val spanTimeInSeconds = (System.currentTimeMillis() - spanTime) / 1000
             val intent = Intent(this, ScoreSST::class.java).apply {
                 putExtra("SpanTime", spanTimeInSeconds)
                 putExtra("totalCorrect", totalCorrect)
+                putExtra("date", formattedDate)
+
             }
             startActivity(intent)
         }

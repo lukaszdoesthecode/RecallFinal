@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recall.R
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * Adapter for the RecyclerView in the PastGamesFragment.
@@ -48,18 +50,46 @@ class Adapter(private val list: List<DataGames>) :
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: UpcomingViewHolder, position: Int) {
         val item = list[position]
-        holder.gameType.text = "Game Type: ${item.gameType}"
-        holder.totalCorrect.text = "Total Correct: ${item.totalCorrect ?: "N/A"}"
-        holder.totalErrors.text = "Total Errors: ${item.totalErrors ?: "N/A"}"
-        holder.phoneticErrors.text = "Phonetic Errors: ${item.phoneticErrors ?: "N/A"}"
-        holder.semanticErrors.text = "Semantic Errors: ${item.semanticErrors ?: "N/A"}"
-        holder.perseverativeErrors.text = "Perseverative Errors: ${item.perseverativeErrors ?: "N/A"}"
-        holder.cueUtilization.text = "Cue Utilization: ${item.cueUtilization ?: "N/A"}"
-        holder.averageTime.text = "Average Time: ${item.averageTime ?: "N/A"}"
-        holder.spanTime.text = "Span Time: ${item.spanTime ?: "N/A"}"
-        holder.correctAnswers.text = "Correct Answers: ${item.correctAnswers ?: "N/A"}"
-        holder.incorrectAnswers.text = "Incorrect Answers: ${item.incorrectAnswers ?: "N/A"}"
-        holder.date.text = "Date: ${item.date}"
+
+        holder.gameType.text = item.gameType
+
+        bindTextView(holder.totalCorrect, "Total Correct: ${item.totalCorrect}", item.totalCorrect)
+        bindTextView(holder.totalErrors, "Total Errors: ${item.totalErrors}", item.totalErrors)
+        bindTextView(holder.phoneticErrors, "Phonetic Errors: ${item.phoneticErrors}", item.phoneticErrors)
+        bindTextView(holder.semanticErrors, "Semantic Errors: ${item.semanticErrors}", item.semanticErrors)
+        bindTextView(holder.perseverativeErrors, "Perseverative Errors: ${item.perseverativeErrors}", item.perseverativeErrors)
+        bindTextView(holder.cueUtilization, "Cue Utilization: ${item.cueUtilization}", item.cueUtilization)
+        bindTextView(holder.averageTime, "Average Time: ${item.averageTime} s", item.averageTime)
+        bindTextView(holder.spanTime, "Span Time: ${item.spanTime} s", item.spanTime)
+        bindTextView(holder.correctAnswers, "Correct Answers: ${item.correctAnswers}", item.correctAnswers)
+        bindTextView(holder.incorrectAnswers, "Incorrect Answers: ${item.incorrectAnswers}", item.incorrectAnswers)
+
+        val formattedDate = formatDate(item.date)
+        bindTextView(holder.date, formattedDate, item.date)
+    }
+
+    /**
+     * Helper function to bind the text to the TextView and set visibility.
+     */
+    private fun bindTextView(textView: TextView, text: String, data: Any?) {
+        if (data != null) {
+            textView.text = text
+            textView.visibility = View.VISIBLE
+        } else {
+            textView.visibility = View.GONE
+        }
+    }
+
+    /**
+     * Helper function to format the date.
+     */
+    private fun formatDate(date: Date?): String {
+        return if (date != null) {
+            val sdf = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+            sdf.format(date)
+        } else {
+            "N/A"
+        }
     }
 
     /**

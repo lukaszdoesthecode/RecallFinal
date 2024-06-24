@@ -8,6 +8,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.recall.R
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 /**
  * Activity to play the ST game
@@ -128,11 +131,16 @@ class ST : AppCompatActivity() {
      */
     private fun showResults() {
         val averageTime = if (results.isNotEmpty()) results.average() else 0.0
+        val currentDate = Date()
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        val formattedDate = dateFormat.format(currentDate)
 
         val intent = Intent(this, ScoreST::class.java).apply {
             putExtra("averageTime", averageTime)
             putExtra("correctAnswers", correctAnswers)
             putExtra("incorrectAnswers", incorrectAnswers)
+            putExtra("date", formattedDate)
+
         }
         startActivity(intent)
     }

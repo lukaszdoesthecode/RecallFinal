@@ -27,6 +27,15 @@
         android:textColor="@color/white"
         android:text="@string/total_correct" />
 
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginStart="36dp"
+        android:textColor="@color/white"
+        android:text="@string/date" />
+
 
     <Button
         android:id="@+id/back"

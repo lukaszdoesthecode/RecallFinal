@@ -71,7 +71,7 @@ class ScoreBNT : AppCompatActivity() {
                 .addOnSuccessListener {
                     // Successfully saved game data
                 }
-                .addOnFailureListener { e ->
+                .addOnFailureListener { _ ->
                     // Handle the failure
                 }
         }
